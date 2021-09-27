@@ -16,22 +16,30 @@
   
   <title>Frontend Mentor | Meet landing page</title>
 </head>
+
+
 <body>
 <header><img src="./assets/logo.svg" alt="logo" class="logo"></header>
 
 <div class="hero">
-  <div class="hero__img img-left"></div>
-  <div class="hero__img img-right"></div>
-  <div class="hero__img"></div>
+  <div class="hero__img img-left">
+    <img src="./assets/desktop/image-hero-left.png" alt="hero image">
+  </div>
+  <div class="hero__img img-right">
+    <img src="./assets/desktop/image-hero-right.png" alt="hero image">
+  </div>
+  <div class="hero__img">
+    <img src="./assets/tablet/image-hero.png" alt="hero image">
+  </div>
   <div class="hero__content">
-    <h1 class="hero__title">Group Chat for Everyone</h1>
+    <h1 class="hero__title">Group Chat <span>for Everyone</span></h1>
     <p class="hero__text body-text">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
-    <button class="btn btn--secondary">Download v1.3</button>
-    <button class="btn">What is it?</button>
+    <button class="btn">Download <span>v1.3</span></button>
+    <button class="btn btn--secondary btn--small">What is it?</button>
   </div>
 </div>
+<div class="counter"><span class="count count--1">01</span></div>
 <main class="main">
-  <span class="counter">01</span>
   <div class="main__gallery gallery">
     <img src="./assets/desktop/image-woman-in-videocall.jpg" alt="woman in videocall" class="gallery__img">
     <img
@@ -45,17 +53,17 @@
       src="./assets/desktop/image-man-texting.jpg" alt="" class="gallery__img">
   </div>
   <div class="main__text">
-    <p class="main__tag">Built for modern use</p>
+    <p class="main__overline">Built for modern use</p>
     <h2 class="main__title">Smarter meetings, all in one place</h2>
     <p class="body">Send messages, share files, show your screen, and record your meetings — all in one
       workspace. Control who can join with invite-only team access, data encryption, and data export.</p>
   </div>
-  <span class="counter">02</span>
 </main>
+<div class="counter counter--2"><span class="count count--2">02</span></div>
 <footer class="footer">
   <h2 class="title footer__title">Experience more together</h2>
   <p class="body footer__body">Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.</p>
-  <button class="btn">Download v1.3</button>
+  <button class="btn btn--secondary">Download <span>v1.3</span></button>
 </footer>
 
 

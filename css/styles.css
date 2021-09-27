@@ -1,11 +1,20 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
 /* ==============================
 COLORS
 ============================== */
 :root {
     --primary-clr: rgba(77, 150, 169, 1);
-    --primary-hover: rgba(143, 227, 249, 1);
+    --primary-hover: rgba(113, 192, 212, 1);
     --secondary-clr: rgba(133, 95, 177, 1);
-    --secondary-hover: rgba(217, 184, 255, 1);
+    --secondary-hover: rgba(177, 139, 221, 1);
     --dark-clr: rgba(40, 40, 61, 1);
     --light-clr: rgba(250, 250, 250, 1);
 }
@@ -13,16 +22,216 @@ COLORS
 /* ==============================
 TYPOGRAPHY
 ============================== */
-body {
+body,
+.counter  {
     font-family: 'Red Hat Display', sans-serif;
-    font-width: 500;
+    font-weight: 500;
     line-height: 1.625rem;
     color: rgba(135, 135, 157, 1);
+    text-align: center;
+    font-size: 1rem;
+}
+
+body {
+    padding: 0;
+}
+
+h1,
+.main__overline,
+.footer__title {
+    margin-bottom: 1.5rem;
 }
 
 h1 {
-    font-width: 900;
+    font-weight: 900;
     font-size: 2.5rem;
     line-height: 2.75rem;
     color: var(--dark-clr);
+}
+
+.counter {
+    font-weight: 900;
+    position: relative;
+    margin-bottom: 78px;
+}
+
+.main__overline {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--primary-clr);
+}
+
+h2,
+p {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 2.25rem;
+    color: var(--dark-clr);
+}
+
+.footer,
+.footer__title {
+    color: var(--light-clr);
+}
+
+.footer {
+    background-image: linear-gradient(to right, rgba(77, 150, 169, .9), rgba(77, 150, 169, .9)),
+                      url("../assets/mobile/image-footer.jpg");
+    background-size: cover;
+    min-height: 428px;
+}
+
+.footer__body {
+    font-size: 1.125rem;
+}
+
+/* ==============================
+BUTTONS
+============================== */
+
+.btn {
+    padding: 1.125em 2.5em;
+    border-radius: 50px;
+    border-width: 0;
+    font-weight: 900;
+    font-size: 1rem;
+    background-color: var(--primary-clr);
+    color: var(--light-clr);
+    font-family: 'Red Hat Display', sans-serif;
+    display: block;
+    margin: 1rem auto;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--primary-hover);
+}
+
+.btn--secondary {
+    background-color: var(--secondary-clr);
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus {
+    background-color: var(--secondary-hover);
+}
+
+.btn--small {
+    padding-left: 1.8125rem;
+    padding-right: 1.8125rem;
+}
+
+.btn span {
+    color: rgba(143, 227, 249, 1);
+}
+
+.btn--secondary span {
+    color: rgba(217, 184, 255, 1);
+}
+/* ==============================
+GENERAL LAYOUT
+============================== */
+
+header {
+    margin: 3rem 0;
+}
+
+/* --- HERO SECTION --- */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: center;
+    overflow: hidden;
+    margin-bottom: calc(4rem + 84px);
+    grid-template-areas: "h-img     h-img     h-img     h-img"
+                         "h-content h-content h-content h-content"
+
+}
+
+.hero__img {
+    position: relative;
+    grid-area: h-img;
+    width: calc(100% + 39px);
+    left: -20px;
+    margin-bottom: 2.6875rem;
+}
+
+.img-left {
+    display: none;
+}
+
+.img-right {
+    display: none;
+}
+
+.hero__content,
+.main,
+.footer {
+    padding: 0 1.5rem;
+}
+
+.hero__content {
+    grid-area: h-content;
+}
+
+.hero__title span {
+    display: block;
+}
+
+/* --- SECTION MARKERS --- */
+
+.count {
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    padding: 1em 1.18em;
+    border-radius: 50px;
+}
+
+.count--2 {
+    padding: 1em 1.09375em;
+    background: var(--light-clr);
+}
+
+.counter--2 {
+    margin-bottom: -13px;
+}
+
+.counter::before {
+    content: "";
+    border: solid rgba(135, 135, 157, 0.25);
+    border-width: 0 1px 0 0;
+    height: 84px;
+    position: absolute;
+    left: 50%;
+    bottom: 41px;
+}
+
+/* --- MAIN SECTION --- */
+
+
+.main {
+    margin-bottom: calc(4rem + 100px);
+}
+
+.main__gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 4rem;
+}
+
+.main__gallery img {
+    border-radius: 10px;
+}
+
+/* --- FOOTER SECTION --- */
+
+.footer {
+    padding: 92px 24px 72px 24px;
 }
