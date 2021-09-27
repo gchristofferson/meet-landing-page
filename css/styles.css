@@ -90,6 +90,22 @@ h2 {
     font-size: 1.125rem;
 }
 
+@media (min-width:768px) {
+    h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+    }
+
+    .main__overline {
+        margin-bottom: 1rem;
+    }
+}
+
 /* ==============================
 BUTTONS
 ============================== */
@@ -110,6 +126,7 @@ BUTTONS
 .btn:hover,
 .btn:focus {
     background-color: var(--primary-hover);
+    cursor: pointer;
 }
 
 .btn--secondary {
@@ -132,6 +149,17 @@ BUTTONS
 
 .btn--secondary span {
     color: rgba(217, 184, 255, 1);
+}
+
+@media (min-width: 768px) {
+    .btn {
+        display: inline-block;
+        margin-top: 0;
+    }
+
+    .btn + .btn {
+        margin-left: 1rem;
+    }
 }
 /* ==============================
 GENERAL LAYOUT
@@ -184,6 +212,41 @@ header {
     display: block;
 }
 
+@media (min-width:768px) {
+
+    .hero {
+        grid-template-areas: "h-img-l     h-img-l     h-img-r     h-img-r"
+                           "h-content   h-content   h-content   h-content"
+    }
+    .hero__img {
+        display: none;
+    }
+
+    .img-left,
+    .img-right {
+        display: block;
+        position: relative;
+    }
+
+    .img-left {
+        grid-area: h-img-l;
+        left: -45px;
+    }
+
+    .img-right {
+        grid-area: h-img-r;
+        left: -26px;
+    }
+
+    .hero__img + .hero__img {
+        margin-left: 2rem;
+    }
+
+    .hero__content {
+        padding: 0 155px;
+    }
+}
+
 /* --- SECTION MARKERS --- */
 
 .count {
@@ -219,7 +282,6 @@ header {
 }
 
 .main__gallery {
-    grid-area: gallery;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -230,8 +292,42 @@ header {
     border-radius: 10px;
 }
 
+@media (min-width:768px) {
+    .main__gallery {
+        grid-template-columns: repeat(4, minmax(164px, 1fr));
+        gap: 11px;
+        padding: 0 40px;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+
+    .main__text {
+        padding: 0 97px;
+    }
+
+    .main__title {
+        padding: 0 55px;
+    }
+}
+
 /* --- FOOTER SECTION --- */
 
 .footer {
     padding: 92px 24px 72px 24px;
+}
+
+@media (min-width:768px) {
+    .footer {
+        background-image: linear-gradient(to right, rgba(77, 150, 169, .9), rgba(77, 150, 169, .9)),
+        url("../assets/tablet/image-footer.jpg");
+    }
+
+    .footer__title {
+        padding: 0 155px;
+    }
+
+    .footer__body {
+        padding: 0 80px;
+        margin-bottom: 2.5rem;
+    }
 }
