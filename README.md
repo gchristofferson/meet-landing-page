@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./meet-landing-page/assets/screenshot.jpg)
+![](https://github.com/gchristofferson/meet-landing-page/blob/main/assets/screenshot.jpg)
 
 ### Links
 
