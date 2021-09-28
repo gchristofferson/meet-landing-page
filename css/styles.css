@@ -205,7 +205,7 @@ main  {
 
 .hero {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     align-content: center;
     overflow: hidden;
     margin-bottom: calc(4rem + 84px);
